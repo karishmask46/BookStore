@@ -1,0 +1,71 @@
+.main{
+    height: 35vh;
+    width: 15vw;
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imagepart{
+    cursor: pointer;
+    margin: 10px;
+    width: 230px;
+    border: 1px solid #E2E2E2;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+//    flex-flow: row wrap;
+}
+.bookimg{
+    height: 100px;
+    width: 80px; 
+}
+.img{
+    height: 60%;
+    width: 100%;
+    background:#F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    height: 30px;
+    width: 160px;
+    // background: red;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.author{
+    height: 10px;
+    width: 160px;
+    // background: red;
+    font-size: 11px;
+    display: flex;
+    color: #878787;
+    align-items: center;
+    justify-content: flex-start;
+}
+.rating{
+    height: 20px;
+    width: 160px;
+    // background: red;
+    font-size: 11px;
+    display: flex;
+    color:#388E3C;
+    align-items: center;
+    justify-content: flex-start;
+}
+.price{
+    height: 20px;
+    width: 160px;
+    // background: red;
+    font-size: 11px;
+    display: flex;
+    color:#0A0102;
+    align-items: center;
+    justify-content: space-between;
+}

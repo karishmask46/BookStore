@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="main" *ngFor="let books of chilsmessage">
+        <div class="imagepart">
+            <div class="img">
+                <img class="bookimg" src="../../../assets/Image 11.png" alt="">
+            </div>
+
+            <div class="title"><span>{{books.bookName}}</span>
+            </div>
+            <div class="author"> <span>{{books.author}}</span></div>
+            <div class="rating"> <span>{{books.rating}}</span></div>
+            <div class="price"><span>Rs.{{books.discountPrice}}</span>
+                <span>{{books.price}}</span>
+            </div>
+        </div>
+    </div>
+</div>

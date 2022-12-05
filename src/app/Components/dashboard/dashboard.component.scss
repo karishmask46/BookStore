@@ -1,0 +1,49 @@
+
+
+.book{
+    height: 50px;
+    width: 150px;
+    border: 0px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    padding-top: 137px;
+    height: 1011px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top{
+    margin: 1px;
+
+}
+.bookname{
+    height: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sort{
+    font-size: large;
+    font-weight: 500;
+}
+.field{
+    border: 0px;
+    font-size: 9px;
+    height: 35px;
+    width: 200px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+.listbooks{  
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 100px;
+    border: 1px solid gainsboro;
+}

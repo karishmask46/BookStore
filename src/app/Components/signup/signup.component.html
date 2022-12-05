@@ -1,0 +1,49 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<div class="main">
+    <div class="innerdiv">
+        <div class="innerdiv1">
+            <img class="img" src="../../../assets/cartImage.png" alt="">
+        </div>
+        <div class="onlinetext">
+            <span class="online">ONLINE BOOK SHOPPING</span>
+        </div>
+    </div>
+    <div class="login">
+        <div class="first">
+            <button class="but"  routerLink="/login">LOGIN</button>
+            <button class="up">SIGNUP</button>
+        </div>
+        <div class="second">
+            <span class="name">Full Name</span>
+            <mat-form-field class="form1">
+            <input matInput class="field1" type="text" formControlName="FullName">
+            <mat-error class="error"> enter valid full name</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="second">
+            <span class="email">Email id</span>
+            <mat-form-field class="form1">
+            <input  matInput class="field1" type="text" formControlName="email">
+            <mat-error class="error"> enter valid email</mat-error>
+        </mat-form-field>
+        </div>
+        <div class="second">
+            <span class="password">password</span>
+            <mat-form-field class="form1">
+            <input  matInput class="field1" type="text" formControlName="Password">
+            <mat-error class="error"> enter valid password</mat-error>
+        </mat-form-field>
+        </div>
+        <div class="second">
+            <span class="number">Mobile Number</span>
+            <mat-form-field class="form1">
+            <input  matInput class="field1" type="text" formControlName="phone">
+            <mat-error class="error"> enter valid 10-digit mobile number</mat-error>
+        </mat-form-field>
+        </div>
+        <div class="third">
+            <button class="loginbutton">Signup</button>
+        </div>
+    </div>
+</div>
+</form>

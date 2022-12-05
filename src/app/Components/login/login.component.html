@@ -1,0 +1,44 @@
+<form [formGroup]="loginForm" (ngSubmit)="onNext()">
+<div class="main">
+    <div class="innerdiv">
+        <div class="innerdiv1">
+            <img class="img" src="../../../assets/cartImage.png" alt="">
+        </div>
+        <div class="onlinetext">
+            <span class="online">ONLINE BOOK SHOPPING</span>
+        </div>
+    </div>
+    <div class="login">
+        <div class="first">
+            <button class="but">LOGIN</button>
+            <button class="up" routerLink="/signup" *ngIf="!show">SIGNUP</button>
+        </div>
+        <div class="second">
+            <span class="email">Email id</span>
+            <mat-form-field class="form1" >
+            <input matInput class="field1" type="text" formControlName="Email">
+            <mat-error class="error"> enter valid email</mat-error>
+        </mat-form-field>
+        </div>
+        <div class="second">
+            <span class="password">Password</span>
+            <mat-form-field class="form1">
+            <input matInput class="field1" type="text" formControlName="password">
+            <mat-error class="error"> enter valid password</mat-error>
+        </mat-form-field>
+            <button class="forgot">Forgot password?</button>
+
+        </div>
+        <div class="third">
+            <button class="loginbutton">Login</button>
+        </div>
+        <div class="fourth">
+            <span>---------------OR---------------</span>
+        </div>
+        <div class="fifth">
+            <button class="face">Facebook</button>
+            <button class="google">Google</button>
+        </div>
+    </div>
+</div>
+</form>
