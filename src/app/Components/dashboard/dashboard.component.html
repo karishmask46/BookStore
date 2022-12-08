@@ -2,7 +2,6 @@
 <div class="header">
     <app-header></app-header>
 </div>
-
     <div class="content">
         <div class="bookname">
             <span class="sort">Books</span>
@@ -13,8 +12,8 @@
                 </mat-select>
             </mat-form-field>
         </div>
-        <div class="listbooks">
-            <app-getbook [chilsmessage]="booklist"></app-getbook>
+        <div class="listbooks" routerLink="/Openbook">
+            <app-getbook [childmessage]="booklist"></app-getbook>
         </div>
     </div>
 </div>

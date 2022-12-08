@@ -1,16 +1,27 @@
-<div class="container">
-    <div class="main" *ngFor="let books of chilsmessage">
+<div class="container" >
+    <div class="main" *ngFor="let books of childmessage">
         <div class="imagepart">
-            <div class="img">
+            <div class="img" (click)="onclick(books)">
                 <img class="bookimg" src="../../../assets/Image 11.png" alt="">
             </div>
-
             <div class="title"><span>{{books.bookName}}</span>
             </div>
-            <div class="author"> <span>{{books.author}}</span></div>
-            <div class="rating"> <span>{{books.rating}}</span></div>
-            <div class="price"><span>Rs.{{books.discountPrice}}</span>
-                <span>{{books.price}}</span>
+            <div class="author"><span> by {{books.author}}</span></div>
+            <div class="rating-container">
+                <div class="rating" fxLayout="row" fxLayoutAlign="center center">
+                    4.5<mat-icon class="star" fxFlexAlign="center">star</mat-icon>
+                </div>
+                <div class="no-of-people-rated">
+                   ({{books.quantity}})
+                </div>
+            </div>
+            <div class="price-container" fxLayout="column">
+                <div class="dicounted-price">
+                    <span>Rs.{{books.discountPrice}}</span>
+                </div>
+                <div class="actual-price">
+                    Rs.{{books.price}}
+                </div>
             </div>
         </div>
     </div>

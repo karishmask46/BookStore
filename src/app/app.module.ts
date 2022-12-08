@@ -16,6 +16,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { GetbookComponent } from './Components/getbook/getbook.component';
 import {MatSelectModule} from '@angular/material/select';
 import { HeaderComponent } from './Components/header/header.component';
+import { OpenBookComponent } from './Components/open-book/open-book.component';
+import { CartComponent } from './Components/cart/cart.component';
+import { WishlistComponent } from './Components/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,11 @@ import { HeaderComponent } from './Components/header/header.component';
     SignupComponent,
     DashboardComponent,
     GetbookComponent,
-    HeaderComponent
+    HeaderComponent,
+    OpenBookComponent,
+    CartComponent,
+    WishlistComponent,
+
   ],
   imports: [
     BrowserModule,

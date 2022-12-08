@@ -1,36 +1,47 @@
-.main{
-    height: 35vh;
-    width: 15vw;
-    border: 1px solid gainsboro;
+.main {
+    // height: 35vh;
+    // width: 15vw;
+    border: 0px solid gainsboro;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 30px;
 }
-.imagepart{
+
+.imagepart {
     cursor: pointer;
-    margin: 10px;
-    width: 230px;
+    margin: 12px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid #E2E2E2;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-//    flex-flow: row wrap;
+    margin-left: 50px;
+    //    flex-flow: row wrap;
 }
-.bookimg{
+
+.bookimg {
     height: 100px;
-    width: 80px; 
+    width: 80px;
 }
-.img{
+
+.img {
     height: 60%;
     width: 100%;
-    background:#F5F5F5;
+    background: #F5F5F5;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.title{
+
+.title {
     height: 30px;
     width: 160px;
     // background: red;
@@ -39,7 +50,8 @@
     align-items: center;
     justify-content: flex-start;
 }
-.author{
+
+.author {
     height: 10px;
     width: 160px;
     // background: red;
@@ -49,23 +61,54 @@
     align-items: center;
     justify-content: flex-start;
 }
-.rating{
-    height: 20px;
-    width: 160px;
-    // background: red;
-    font-size: 11px;
+
+.rating-container {
     display: flex;
-    color:#388E3C;
-    align-items: center;
-    justify-content: flex-start;
+    width: 160px;
+    flex-direction: row;
+    margin-top: 10px;
+
+    .rating {
+        width: 35px;
+        height: 17px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #388E3C;
+        border-radius: 1px;
+        padding: 2px;
+        color: white;
+    }
+
+    .star {
+        margin-top: 10px;
+        margin-left: 1px;
+        font-size: small;
+        vertical-align: middle !important;
+    }
+
+    .no-of-people-rated {
+        margin-top: 3px;
+        margin-left: 10px;
+        color: gray;
+    }
 }
-.price{
-    height: 20px;
-    width: 160px;
-    // background: red;
-    font-size: 11px;
+
+.price-container {
     display: flex;
-    color:#0A0102;
-    align-items: center;
-    justify-content: space-between;
+    width: 160px;
+
+    .dicounted-price {
+        margin-top: 10px;
+        font-size: large;
+        font-weight: 500;
+    }
+
+    .actual-price {
+        margin-top: 10px;
+        margin-left: 5px;
+        text-decoration: line-through;
+        color: gray;
+    }
 }

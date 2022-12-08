@@ -1,0 +1,72 @@
+<div>
+    <app-header></app-header>
+</div>
+<div class="maincont">
+    <div routerLink="/dashboard" class="main">
+        <button class="home">Home /</button>
+    </div>
+    <div class="bookbutton">
+        <button class="book">Book</button>
+    </div>
+</div>
+<!-- imagepart -->
+<div class="imagepart">
+    <div class="leftpart">
+        <div class="inner">
+            <img class="smallimg" src="../../../assets/Image 11.png" alt="">
+            <div class="img">
+                <img class="bookimg" src="../../../assets/Image 11.png" alt="">
+            </div>
+        </div>
+        <div class="buttonimg">
+            <div  (click)="isShow()" *ngIf="!show">
+            <button class="bag" mat-raised-button  (click)="cartadd()">ADD TO BAG</button></div>  
+        <div class="quantity" *ngIf="show">
+            <button class="subtract" (click)=" decrement()">-</button>
+            <span class="numder">{{count}}</span>
+            <button class="add" (click)="increment()">+</button>
+        </div>
+        <button class="wish" mat-raised-button (click)="wishlist()"><mat-icon  style="color:white ;" class="fav">favorite</mat-icon>WISHLIST</button>
+    </div>
+    </div>
+    <div class="rightpart">
+        <div class="midpart">
+            <div class="title">
+                <h1>{{Book.bookName}}</h1>
+            </div>
+            <div class="author">
+                <p>{{Book.author}}</p>
+            </div>
+            <div class="rating-container">
+                <div class="rating" fxLayout="row" fxLayoutAlign="center center">
+                    4.5<mat-icon class="star" fxFlexAlign="center">star</mat-icon>
+                </div>
+                <div class="no-of-people-rated">
+                    ({{Book.quantity}})
+                </div>
+            </div>
+            <div class="price-container" fxLayout="row">
+                <div class="dicounted-price">
+                    <span>
+                        Rs.
+                        {{Book.discountPrice}}
+                    </span>
+                </div>
+                <div class="actual-price">
+                    Rs.
+                    {{Book.price}}
+                </div>
+            </div>
+            <hr>
+            <div>
+                <ul>
+                    <li>
+                        Book Description
+                    </li>
+                </ul>
+                {{Book.description}}
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
