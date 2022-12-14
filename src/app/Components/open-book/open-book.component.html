@@ -2,7 +2,7 @@
     <app-header></app-header>
 </div>
 <div class="maincont">
-    <div routerLink="/dashboard" class="main">
+    <div (click)="dasboard()" class="main">
         <button class="home">Home /</button>
     </div>
     <div class="bookbutton">
@@ -26,7 +26,7 @@
             <span class="numder">{{count}}</span>
             <button class="add" (click)="increment()">+</button>
         </div>
-        <button class="wish" mat-raised-button (click)="wishlist()"><mat-icon  style="color:white ;" class="fav">favorite</mat-icon>WISHLIST</button>
+        <button class="wish" mat-raised-button (click)="wishlist()" routerLink="/home/wishlist"><mat-icon  style="color:white ;" class="fav">favorite</mat-icon>WISHLIST</button>
     </div>
     </div>
     <div class="rightpart">
@@ -67,6 +67,31 @@
                 {{Book.description}}
             </div>
             <hr>
+            <div class="feedback">
+                <h2>Customer Feedback</h2>
+            </div>
+            <div class="feed">
+                <p>Overall Rating</p>
+                <div class="star">
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+                <textarea matInput class="searchInput" type="text" placeholder="write a review"
+                        style="width: 570px;height: 70px;" name="comment" #box></textarea>
+                        <div fxLayoutAlign="end center">
+                            <button class="btn">Submit</button>
+                        </div>
+            </div>
         </div>
     </div>
 </div>

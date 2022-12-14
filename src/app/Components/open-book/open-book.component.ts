@@ -1,7 +1,11 @@
 
 import { Component, Input, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 import { BookserviceService } from 'src/app/Services/bookservice.service';
+import { CartService } from 'src/app/Services/cart.service';
+import { DataService } from 'src/app/Services/data.service';
 import { UserService } from 'src/app/Services/user.service';
+import { WishlistService } from 'src/app/Services/wishlist.service';
 
 @Component({
   selector: 'app-open-book',
@@ -11,15 +15,20 @@ import { UserService } from 'src/app/Services/user.service';
 export class OpenBookComponent implements OnInit {
   show=false;
   @Input() cartitem:any
-  constructor(private getbookdata: UserService, private bookservice: BookserviceService) { }
+  constructor(private dataservice:DataService,private cartservice:CartService, private wish:WishlistService,private router:Router ) { }
   Book: any
   length:any;
   cart:any;
   count=1;
   ngOnInit(): void {
-    this.bookservice.getbookdetails.subscribe((result: any) => {
+    this.dataservice.getbookdetails.subscribe((result: any) => {
       this.Book = result;
+      console.log(this.Book);  
     })
+
+  }
+  dasboard(){
+    this.router.navigateByUrl('/home/dashboard')
   }
   isShow(){
     this.show=true;
@@ -28,16 +37,18 @@ export class OpenBookComponent implements OnInit {
     let data = {
       bookid: this.Book._id,
     }
-    this.getbookdata.addtoCart(data).subscribe((result: any) => {
+    console.log(this.Book._id);
+    this.cartservice.addtoCart(data).subscribe((result: any) => {
       console.log(result);
-      localStorage.setItem('cartitems',result)
+      
     })
   }
   wishlist(){
     let data={
       bookid: this.Book._id,
     }
-    this.getbookdata.wishlist(data).subscribe((result:any)=>{
+    console.log(this.Book._id);
+    this.wish.wishlist(data).subscribe((result:any)=>{
       console.log(result);
     })
   }

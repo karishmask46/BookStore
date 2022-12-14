@@ -5,15 +5,15 @@
     <div class="content">
         <div class="bookname">
             <span class="sort">Books</span>
-            <mat-form-field class="field">
+            <mat-form-field class="field" appearance="outline">
                 <mat-label style="color: black; font-size: 12px;">sort by relevance</mat-label>
                 <mat-select>
                     <mat-option *ngFor="let food of sortrelevance" [value]="food.value">{{food.viewValue}}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
-        <div class="listbooks" routerLink="/Openbook">
-            <app-getbook [childmessage]="booklist"></app-getbook>
+        <div class="listbooks">
+            <app-getbook [childmessage]="booklist" (messageevent)="recivemessage($event)"></app-getbook>
         </div>
     </div>
 </div>

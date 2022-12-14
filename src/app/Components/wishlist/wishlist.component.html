@@ -1,1 +1,34 @@
-<p>wishlist works!</p>
+<div class="header">
+    <app-header [cartitemslist]="getwishlistitems()"></app-header>
+</div>
+<div class="Container">
+    <div class="main">
+        <div class="header">
+            <p type="button" (click)="todashboard()" >Home / </p>
+            <p>My Wishlist</p>
+        </div>
+    </div>
+    <div class="cart_container">
+        <h3>My Wishlist({{wishlist.length}})</h3>
+        <div class="crt" *ngFor="let wish of wishlist">
+            <div class="image">
+                <img src="../../../assets/Image 11.png" alt="">
+            </div>
+            <div class="book-description">
+                <h2>{{wish.product_id.bookName}}</h2>
+                <p>by {{wish.product_id.author}} </p>
+                <div class="price-container" fxLayout="row">
+                    <div class="dicounted-price">
+                        <b>{{wish.product_id.discountPrice}} </b>
+                    </div>
+                    <div class="actual-price">
+                        Rs.  {{wish.product_id.price}}
+                    </div>
+                </div>
+            </div>
+            <div class="delete" (click)="deleteItem(wish.product_id._id)" >
+                <img src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>

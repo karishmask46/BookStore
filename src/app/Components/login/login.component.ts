@@ -30,9 +30,9 @@ export class LoginComponent implements OnInit {
         password: this.loginForm.value.password,
         service:'advance'
       }
-      this.loginbook.login(abcd).subscribe((result:any)=>
-        {
+      this.loginbook.login(abcd).subscribe((result:any)=> {
           console.log(result);
+          localStorage.setItem('token',result.result.accessToken)
         })
     }
     else {

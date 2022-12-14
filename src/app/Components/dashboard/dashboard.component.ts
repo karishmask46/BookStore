@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BookserviceService } from 'src/app/Services/bookservice.service';
 import { UserService } from 'src/app/Services/user.service';
 
 interface list {
@@ -12,7 +13,7 @@ interface list {
 })
 export class DashboardComponent implements OnInit {
   booklist=[]
-  constructor(private getbookdata: UserService) { }
+  constructor(private getbookdata: BookserviceService) { }
   ngOnInit(): void {
     this.bookdate();
   }
@@ -24,7 +25,10 @@ export class DashboardComponent implements OnInit {
     this.getbookdata.getbooks().subscribe((result: any) => {
       console.log(result);
       this.booklist = result.result;
+      console.log(this.booklist);
     })
   }
-
+recivemessage(event:any){
+this.bookdate();
+}
 }

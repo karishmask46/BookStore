@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartService } from 'src/app/Services/cart.service';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -9,11 +11,16 @@ import { UserService } from 'src/app/Services/user.service';
 export class HeaderComponent implements OnInit {
   token:any;
 content:any;
-  constructor(private user:UserService) {
-    
+@Input() cartitemslist:any;
+  constructor(private router:Router,private cart:CartService) {
+     this.content=localStorage.getItem('cartitems')
    }
 
   ngOnInit(): void {
+  this.cart.cartitemQuantity();
+  localStorage.getItem('cartitems')
   }
-
+  tocart(){
+  this.router.navigateByUrl('/home/cart')
+  }
 }

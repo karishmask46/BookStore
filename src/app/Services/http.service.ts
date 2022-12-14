@@ -15,13 +15,22 @@ export class HttpService {
   getbook(url:any,token:boolean=false,options:any){
    return this.http.get(url,token && options)
   }
-  putbook(url:any,token:boolean=false,options:any){
-    return this.http.put(url,token && options)
+  getwishlist(url:any,token:boolean=true,options:any){
+    return this.http.get(url,token && options)
+   }
+  putbook(url:any,data:any,token:boolean=true,options:any){
+    return this.http.put(url,data,token && options)
   }
   addcart(url:any,data:any,token:boolean=true,options:any){
-    return this.http.post(url,data,token && options)
+    console.log(url);
+    console.log(data); 
+    return this.http.post(url,data,token && options) 
   }
+  
   wishlist(url:any,data:any,token:boolean=true,options:any){
     return this.http.post(url,data,token && options)
+  }
+  deleteService(url: string, token: boolean = true,options: any) {
+    return this.http.delete(url,token && options)
   }
 }

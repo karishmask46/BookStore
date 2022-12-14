@@ -19,6 +19,9 @@ import { HeaderComponent } from './Components/header/header.component';
 import { OpenBookComponent } from './Components/open-book/open-book.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { OrderComponent } from './Components/order/order.component';
+import { HomeComponent } from './Components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
     OpenBookComponent,
     CartComponent,
     WishlistComponent,
-
+    OrderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
     MatInputModule,
     MatToolbarModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
