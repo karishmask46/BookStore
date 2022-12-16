@@ -1,5 +1,5 @@
 <div>
-    <app-header [cartitemslist]="cartbook"></app-header>
+    <app-header></app-header>
 </div>
 <div class="maincont">
     <div (click)="todashboard()" class="main">
@@ -33,11 +33,11 @@
                 </div>
             </div>
             <div class="quantity">
-                <button class="subtract" (click)="decrement()" (click)="getcartitems()">-</button>
-                <span class="numder">{{count}}</span>
-                <button class="add" (click)="increment()" (click)="getcartitems()">+</button>
+                <button class="subtract" (click)=" decrement()" (click)="decreasebook(cart)">-</button>
+                <span class="numder">{{cart.quantityToBuy}} {{cart.count}}</span>
+                <button class="add" (click)=" increasebook(cart)" (click)="increment()" >+</button>
                 <div class="btn">
-                    <button mat-button (click)="deleteItem(cart._id)">
+                    <button mat-button  (click)="deleteItem(cart._id) ">
                         Remove
                     </button>
                 </div>
@@ -45,79 +45,84 @@
         </div>
     </div>
     <div *ngIf="placeorder">
-        <button class="place" (click)="addressdetails()">PLACE ORDER</button>
+        <button class="place"  (click)="addressdetails()">PLACE ORDER</button>
     </div>
 </div>
-<div class="address">
-    <form [formGroup]="createForm" (ngSubmit)="close()">
-        <button *ngIf="!summary" class="k2" (click)="continuebutton()" >Continue</button>
-        <div class="head" *ngIf="address">
-            <span style="font-size:medium;" class="det">Address Details</span>
-        </div>
-        <div *ngIf="!address" class="tag">
-            <div class="formtag">
-                <span style="font-size:18px;">Customer Details</span>
-                <button class="new">Add New Address</button>
+<form [formGroup]="createForm" (ngSubmit)="close()">
+    <div class="address">
+        <div class="login">
+            <div class="first" *ngIf="address">
+                <span style="font-size:medium;" class="det">Address Details</span>
             </div>
-            <div class="firstfield">
-                <div class="second">
-                    <span class="email">Full name</span>
+            <div *ngIf="!address" class="Abcd">
+                <div class="Efgh">
+                    <span style="font-size:18px;">Customer Details</span>
+                    <span class="new">New Address</span>
+                </div>
+                <div class="ijkl">
+                    <div class="second">
+                        <div class="email">
+                        <span >Full name</span></div>
+                        <mat-form-field class="form1">
+                            <input matInput class="field1" type="text" formControlName="fullname">
+                            <mat-error class="error"> enter valid name</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="second">
+                        <span class="password">mobile number</span>
+                        <mat-form-field class="form1">
+                            <input matInput class="field1" type="text" formControlName="mobilenumber">
+                            <mat-error class="error"> enter valid number</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="third">
+                    <span class="password"> Address </span>
                     <mat-form-field class="form1">
-                        <input matInput class="field1" type="text" formControlName="fullname">
-                        <mat-error class="error"> enter valid Name </mat-error>
+                        <input matInput class="field1" type="text" formControlName="fullAddress">
+                        <mat-error class="error"> enter valid address</mat-error>
                     </mat-form-field>
                 </div>
-                <div class="second">
-                    <span class="email">Mobile number</span>
-                    <mat-form-field class="form1">
-                        <input matInput class="field1" type="text" formControlName="mobilenumber">
-                        <mat-error class="error"> enter valid mobile number</mat-error>
-                    </mat-form-field>
-                </div>
-            </div>
-            <div class="second">
-                <span class="k1">Address</span>
-                <mat-form-field class="form2">
-                    <input matInput class="field2" type="text" formControlName="fullAddress">
-                    <mat-error class="error"> enter valid address</mat-error>
-                </mat-form-field>
-            </div>
-            <div class="secondfield">
-                <div class="second">
-                    <span class="email">City/town</span>
-                    <mat-form-field class="form1">
-                        <input matInput class="field1" type="text" formControlName="city">
-                        <mat-error class="error"> enter city/town </mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="second">
-                    <span class="email">State</span>
+                <div class="mnop">
+                <div class="fourth">
+                    <span class="password"> state </span>
                     <mat-form-field class="form1">
                         <input matInput class="field1" type="text" formControlName="state">
-                        <mat-error class="error">enter state name</mat-error>
+                        <mat-error class="error"> enter valid state</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="fourth">
+                    <span class="password"> city/town </span>
+                    <mat-form-field class="form1">
+                        <input matInput class="field1" type="text" formControlName="city">
+                        <mat-error class="error"> enter valid city</mat-error>
                     </mat-form-field>
                 </div>
             </div>
-            <div class="type">
-                <div class="q1">
-                    <span>Type</span>
+                <div class="type">
+                        <span>Type</span>
+                    <div class="boxes">
+                        <mat-radio-button value="Home">Home</mat-radio-button>
+                        <mat-radio-button value="Work">Work</mat-radio-button>
+                        <mat-radio-button value="Others">Others</mat-radio-button>
+                    </div>
                 </div>
-                <div class="boxes">
-                    <mat-radio-button value="Home">Home</mat-radio-button>
-                    <mat-radio-button value="Work">Work</mat-radio-button>
-                    <mat-radio-button value="Others">Others</mat-radio-button>
+                <div class="qrl">
+                    <button class="k2" (click)="continuebutton()">Continue</button>
                 </div>
             </div>
         </div>
-    </form>
-</div>
+    </div>
+</form>
+
 <div class="summary">
-    <div class="head" *ngIf="summary">
+    <div class="head1" *ngIf="summary">
         <span style="font-size: medium;">Order Summary</span>
     </div>
-    <div *ngIf="!summary">
-        <span class="n1"> Order Summary</span>
-        <div class="crt1" *ngFor="let cart of cartbook">
+    <div *ngIf="!summary" class="work">
+        <div class="n1">
+        <span> Order Summary</span></div>
+        <div class="cart1" *ngFor="let cart of cartbook">
             <div class="image">
                 <img src="../../../assets/Image 11.png" alt="">
             </div>
@@ -138,6 +143,7 @@
                 </div>
             </div>
         </div>
-        <a class="order" (click)="placeOrder()" routerLink="/home/order">Checkout</a>
+        <div class="xyz">
+        <a class="order" (click)="placeOrder()" routerLink="/home/order">Checkout</a></div>
     </div>
 </div>

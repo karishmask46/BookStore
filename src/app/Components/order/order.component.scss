@@ -1,22 +1,25 @@
-table,
+table{
+    border: 1px solid black;
+    margin-bottom: 100px;
+    position: relative;
+    right: 100px;
+}
 th,
 td {
+    height: 30px;
+   width: 40px;
     border: 1px solid black;
+   
 }
-
-.src {
-    width: 200px;
-    height: 200px;
-}
-
 .continuebutton {
     background-color:#3371B5;
     color: white;
     border: none;
-    margin-top: 40px;
+    border-radius: 5px;
     margin-left: 50px;
     width: 200px;
     height: 40px;
+    margin-bottom: 10px;
     text-align: center;
     justify-content: center;
 }
@@ -24,12 +27,20 @@ td {
     margin-left: 350px;
 }
 .test{
-margin-right: 500px;
+    margin-left: 20px;
+width: 400px;
+border:0px solid red;
 }
 .table{
-    width: 600px;
+    width: 700px;
+    height: 120px;
     display: flex;
    border: 0px solid red;
+}
+.tlb{
+    width: 800px;
+    height: 200px;
+    border: 0px solid red;
 }
 .cont{
 margin-left: 100px;

@@ -28,7 +28,7 @@ token:any;
         'x-access-token':this.token
       })
     }
-    return this.http.getwishlist('https://bookstore.incubation.bridgelabz.com/bookstore_user/get_wishlist_items', true, header)
+    return this.http.getwishlist("https://bookstore.incubation.bridgelabz.com/bookstore_user/get_wishlist_items", true, header)
   }
   removeWish(data:any)
   {

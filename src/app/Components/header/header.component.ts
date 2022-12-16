@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/Services/cart.service';
-import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -22,5 +21,8 @@ content:any;
   }
   tocart(){
   this.router.navigateByUrl('/home/cart')
+  }
+  towishlist(){
+    this.router.navigateByUrl('/home/wishlist')
   }
 }

@@ -8,6 +8,7 @@
 }
 .tool{
     background:#A03037;
+    width: 1263px;
 }
 .store{
     color: white;
@@ -81,4 +82,55 @@
     left: 670px;
     top: 21px;
     color: white;
+}
+.wishlist{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: 595px;
+    color: white;
+    bottom: 2px;
+}
+.wish1{
+    font-size: 10px;
+    height: 20px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 100;
+    color: white;
+    border: 0px solid white;
+    margin-left: 550px;
+    margin-bottom: 13px;
+}
+.wish2{
+    font-size: 10px;
+    height: 20px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 100;
+    color: white;
+    border: 0px solid white;
+    margin-bottom: 13px;
+}
+.wish3{
+    font-size: 10px;
+    height: 20px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 100;
+    color: white;
+    border: 0px solid white;
+    margin-bottom: 13px;
+}
+.fav{
+    margin-left: 500px;
+}
+.fav1{
+    margin-right: 400px;
 }

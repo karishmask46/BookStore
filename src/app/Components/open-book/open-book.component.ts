@@ -1,10 +1,8 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Router} from '@angular/router';
-import { BookserviceService } from 'src/app/Services/bookservice.service';
 import { CartService } from 'src/app/Services/cart.service';
 import { DataService } from 'src/app/Services/data.service';
-import { UserService } from 'src/app/Services/user.service';
 import { WishlistService } from 'src/app/Services/wishlist.service';
 
 @Component({
@@ -15,11 +13,13 @@ import { WishlistService } from 'src/app/Services/wishlist.service';
 export class OpenBookComponent implements OnInit {
   show=false;
   @Input() cartitem:any
+  
   constructor(private dataservice:DataService,private cartservice:CartService, private wish:WishlistService,private router:Router ) { }
   Book: any
   length:any;
   cart:any;
   count=1;
+  item_qty:any;
   ngOnInit(): void {
     this.dataservice.getbookdetails.subscribe((result: any) => {
       this.Book = result;
@@ -35,11 +35,14 @@ export class OpenBookComponent implements OnInit {
   }
   cartadd() {
     let data = {
-      bookid: this.Book._id,
+      bookid:this.Book._id,
     }
+    console.log(data);
+    
     console.log(this.Book._id);
     this.cartservice.addtoCart(data).subscribe((result: any) => {
       console.log(result);
+     
       
     })
   }
@@ -58,4 +61,5 @@ export class OpenBookComponent implements OnInit {
   decrement(){
     this.count=this.count-1;
   }
+  
 }

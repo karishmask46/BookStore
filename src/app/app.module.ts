@@ -22,6 +22,8 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { OrderComponent } from './Components/order/order.component';
 import { HomeComponent } from './Components/home/home.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { HomeComponent } from './Components/home/home.component';
     WishlistComponent,
     OrderComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,9 @@ import { HomeComponent } from './Components/home/home.component';
     MatToolbarModule,
     MatIconModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatPaginatorModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

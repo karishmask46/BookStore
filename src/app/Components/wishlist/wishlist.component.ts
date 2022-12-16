@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 import { WishlistService } from 'src/app/Services/wishlist.service';
@@ -10,6 +10,7 @@ import { WishlistService } from 'src/app/Services/wishlist.service';
 })
 export class WishlistComponent implements OnInit {
   @Input() recieveBookList: any;
+  @Output() RefreshEvent = new EventEmitter<any>();
   BookList=[]
   Book:any
   description: any;
@@ -29,13 +30,16 @@ export class WishlistComponent implements OnInit {
   }
   getwishlistitems(){
     this.book.getwishlist().subscribe((result:any)=>{
+      console.log(result);
       this.wishlist=result.result;
+      console.log(this.wishlist);
     })
   }
   deleteItem(Book:any){
     console.log(Book)
     this.book.removeWish(Book).subscribe((res:any)=>{
       console.log(res)
+      this.RefreshEvent.emit(res)
     })
   }
   todashboard() {

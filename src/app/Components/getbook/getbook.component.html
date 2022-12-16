@@ -1,5 +1,5 @@
 <div class="container" >
-    <div class="main" *ngFor="let books of childmessage">
+    <div class="main" *ngFor="let books of childmessage | paginate: {itemsPerPage: 12, currentPage:page,totalItems:totalLength}">
         <div class="imagepart">
             <div class="img" (click)="onclick(books)">
                 <img class="bookimg" src="../../../assets/Image 11.png" alt="">
@@ -25,4 +25,7 @@
             </div>
         </div>
     </div>
+    <div class="page">
+        <pagination-controls (pageChange)="page=$event" class="page"></pagination-controls>
+      </div>
 </div>

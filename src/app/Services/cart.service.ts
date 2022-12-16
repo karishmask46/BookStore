@@ -29,7 +29,7 @@ export class CartService {
         'x-access-token': this.token
       })
     }
-    return this.httpservice.getbook('https://bookstore.incubation.bridgelabz.com/bookstore_user/get_cart_items', true, header)
+    return this.httpservice.getbook('https://bookstore.incubation.bridgelabz.com/bookstore_user/get_cart_items',true,header)
   }
   customerdetails(data:any){
     let header = {
@@ -60,6 +60,14 @@ export class CartService {
     }
     return this.httpservice.postservice("https://bookstore.incubation.bridgelabz.com/bookstore_user/add/order", data, true, header)
   }
+  quantity(bookid:any,data:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.token
+      })
+  }
+  return this.httpservice.putbook("https://bookstore.incubation.bridgelabz.com/bookstore_user/cart_item_quantity/"+bookid,data,true,header)
 }
-  
+} 
 

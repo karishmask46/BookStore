@@ -21,7 +21,15 @@ export class CartComponent implements OnInit {
   placeorder = true;
   summary = false;
   continue = true;
+  item_qty:any;
   createForm !: FormGroup;
+  discountPrice: any;
+  bookName: any;
+  author: any;
+  quantity: any
+  price: any;
+  _id: any;
+  length: any;
   addressType:any[]=['Home','work','others']
   ngOnInit(): void {
     this.getcartitems();
@@ -40,12 +48,11 @@ export class CartComponent implements OnInit {
     this.user.cartitemQuantity().subscribe((result: any) => {
       this.cartbook = result.result;
       console.log(this.cartbook);
-      localStorage.setItem('cartitems', result.result.length)
     })
   }
   close(){
     console.log('enter data');
-    
+ 
     this.show = false;
     console.log('valid data', this.createForm.value);
     let abcd = {
@@ -103,8 +110,27 @@ export class CartComponent implements OnInit {
       this.messageevent.emit(res)
     })
   }
-  testing(){
-    console.log('testing');
-    
+  increasebook(Book: any) {
+    this.item_qty = Book.quantityToBuy;
+    this.item_qty += 1;
+    console.log("increased",this.item_qty);
+    this.updateCount(Book);
+  }
+  decreasebook(Book: any) {
+    this.item_qty =Book.quantityToBuy;
+    if (this.item_qty > 0) {
+      this.item_qty -= 1;
+      console.log( "decrease", this.item_qty);
+      this.updateCount(Book);
+    }
+
+  }
+  updateCount(Book:any){
+    let payload={
+      quantityToBuy: this.item_qty
+    }
+    this.user.quantity(Book._id,payload).subscribe((res:any)=>{
+      console.log(res)
+    })
   }
 }

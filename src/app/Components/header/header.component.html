@@ -10,9 +10,22 @@
                 <input type="text" class="search2" matInput>
             </div>
         </mat-form-field>
-        <img class="person" src="../../../assets/person_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-        <span class="profile">Profile</span>
-        <img class="cart" src="../../../assets/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg" alt="" (click)=" tocart()">
-        <span class="textcart">Cart</span>
+        <!-- <img class="person" src="../../../assets/person_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <span class="profile">Profile</span> -->
+        <!-- <img class="cart" src="../../../assets/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg" alt="" >
+        <span class="textcart">Cart</span> -->
+        
+        <div class="wish1">
+            <mat-icon style="color:white ;" >person</mat-icon>
+             <span> Profile </span>
+        </div>
+        <div class="wish2">
+            <mat-icon style="color:white;"  (click)="towishlist()">favorite</mat-icon>
+            <span> Wishlist </span>
+        </div>
+        <div  class="wish3">
+            <mat-icon style="color:white ;"  (click)="tocart()">shopping_cart</mat-icon>
+            <span> Cart </span>
+        </div>
     </div>
 </mat-toolbar>

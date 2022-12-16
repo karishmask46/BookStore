@@ -1,15 +1,17 @@
 <div class="header">
-    <app-header [cartitemslist]="getwishlistitems()"></app-header>
+    <app-header ></app-header>
 </div>
 <div class="Container">
     <div class="main">
         <div class="header">
-            <p type="button" (click)="todashboard()" >Home / </p>
+            <p type="button" (click)="todashboard()" style="color: #9D9D9D" >Home / </p>
             <p>My Wishlist</p>
         </div>
     </div>
     <div class="cart_container">
-        <h3>My Wishlist({{wishlist.length}})</h3>
+        <div>
+        <h3 class="j1">My Wishlist({{wishlist.length}})</h3>
+    </div>
         <div class="crt" *ngFor="let wish of wishlist">
             <div class="image">
                 <img src="../../../assets/Image 11.png" alt="">
@@ -19,7 +21,7 @@
                 <p>by {{wish.product_id.author}} </p>
                 <div class="price-container" fxLayout="row">
                     <div class="dicounted-price">
-                        <b>{{wish.product_id.discountPrice}} </b>
+                        <b>Rs. {{wish.product_id.discountPrice}} </b>
                     </div>
                     <div class="actual-price">
                         Rs.  {{wish.product_id.price}}
@@ -27,7 +29,8 @@
                 </div>
             </div>
             <div class="delete" (click)="deleteItem(wish.product_id._id)" >
-                <img src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                <img class="deletebutton" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+               <!-- <mat-icon style="color:#9D9D9D ;">delete</mat-icon> -->
             </div>
         </div>
     </div>

@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BookserviceService } from 'src/app/Services/bookservice.service';
 import { DataService } from 'src/app/Services/data.service';
-import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-getbook',
@@ -11,10 +9,22 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class GetbookComponent implements OnInit {
   @Input() childmessage:any;
-  constructor(private dataservice:DataService,private user:UserService,private router:Router) { }
+  page:number=1;
+  Search='';
+  id:any;
+  totalLength:any;
+  constructor(private dataservice:DataService,private router:Router) { }
 
   ngOnInit(): void {
-    console.log(this.childmessage); 
+    this.dataservice.getbookdetails.subscribe((res:any)=>{
+      console.log(res)
+      this.Search=res;
+      // this.totalLength=res.result.length; 
+    })
+  }
+  toBookDetails(id: any) {
+    this.id = id;
+    this.router.navigate(['/home/openbook'], { state: { value: id } })
   }
   onclick(book:any){
     this.dataservice.SendBookDetails(book)

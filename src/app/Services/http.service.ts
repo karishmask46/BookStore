@@ -31,6 +31,9 @@ export class HttpService {
     return this.http.post(url,data,token && options)
   }
   deleteService(url: string, token: boolean = true,options: any) {
+    console.log(url);
+    
     return this.http.delete(url,token && options)
+    
   }
 }

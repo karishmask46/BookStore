@@ -7,7 +7,7 @@
 }
 
 .main {
-    margin-left: 170px;
+    margin-left: 140px;
     margin-top: 20px;
 }
 
@@ -34,8 +34,8 @@
     border-color: black;
     border: groove;
     height: auto;
-    width: 900px;
-    margin-left: 176px;
+    width: 1000px;
+    margin-left: 146px;
     margin-right: 266px;
 }
 
@@ -50,36 +50,17 @@
     font-weight: 500;
 }
 
-.address {
-    border: groove;
-    height:auto;
-    width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 176px;
-    margin-right: 266px;
-    margin-top: 20px;
-}
-.maindiv{
-    height: auto;
-    width: auto;
-    display: flex;
-    border: 1px solid red;
-}
-
 
 .summary {
     border-color: black;
     border: groove;
     height: auto;
-    width: 900px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 175px;
+    margin-left: 145px;
     margin-right: 266px;
     margin-top: 20px;
 }
@@ -136,8 +117,9 @@ img {
     display: flex;
     flex-direction: row;
     border: 0px solid red;
-    
+
 }
+
 .crt1 {
     display: flex;
     flex-direction: row;
@@ -145,9 +127,11 @@ img {
     margin-right: 500px;
     margin-top: 50px;
 }
-.n1{
-margin-left: 60px;
+
+.n1 {
+    margin-left: 60px;
 }
+
 .btn {
     margin-left: 9px;
     margin-top: 5px;
@@ -206,162 +190,187 @@ margin-left: 60px;
     border: 1px solid gainsboro;
 }
 
-.formtag {
-    height: 8%;
-    width: 90%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 0px solid red;
-
+::ng-deep .mat-form-field-underline {
+    display: none;
 }
-.tag{
-    height: 500px;
-    width: 900px;
+
+.address {
+    border: groove;
+    height: auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 146px;
+    margin-right: 266px;
+    margin-top: 20px;
+}
+
+.login {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     border: 0px solid red;
+    flex-direction: column;
+}
 
+.first {
+    height: 50px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Abcd {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid blue;
+}
+
+.Efgh {
+    height: 105px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 0px solid Yellow;
+    justify-content: space-between;
 }
 
 .new {
     height: 40px;
     width: 200px;
     background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #A03037;
     border: 1.5px solid #A03037;
     border-radius: 5px;
 }
 
-.second {
-    height: 40px;
-    width: 383px;
-    border: 0px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.email {
-    font-size: 14px;
-    position: relative;
-    right: 150px;
-    top: 20px;
-}
-
-.k1 {
-    font-size: 14px;
-    position: relative;
-    right: 380px;
-    top: 20px;
-}
-
-.field1 {
-    height: 35px;
-    width: 300px;
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-}
-
-.field2 {
-    height: 75px;
-    width: 730px;
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-    margin-left: 0px;
-    margin-bottom: 500px;
-}
-
-::ng-deep .mat-form-field-underline {
-    display: none;
-}
-
-.form1 {
-    height: 50px;
-    width: 310px;
-    border: 0px solid red;
-    margin-right: 80px;
-}
-
-.form2 {
-    height: 50px;
-    width: 810px;
-    border: 0px solid red;
-}
-
-.error {
-    font-size: 10px;
-    color: red;
-}
-
-.firstfield {
-    height: 8%;
+.ijkl {
+    height: 60px;
     width: 90%;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 0px solid red;
-}
-
-.secondfield {
-    height: 10%;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 0px solid red;
-    margin-top: 40px;
-}
-
-.type {
-    height: 10%;
-    width: 90%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    border: 0px solid red;
-    margin-top: 20px;
-}
-.q1{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    
-}
-.boxes{
-    display: flex;
-    width: 400px;
-    height: 40px;
     border: 0px solid blue;
-    justify-content: space-between;
     flex-direction: row;
-    align-items: center;
-    margin-right: 100px;
 }
 
-.check {
-    height: 25px;
-    width: 25px;
-    color: #3371B5;
+.second {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 0px solid saddlebrown;
+
+    .email {
+        font-size: 14px;
+    }
+
+    .form1 {
+        height: 60%;
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .password {
+        font-size: 14px;
+    }
+
+    .field1 {
+        height: 35px;
+        width: 300px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+
+    }
 }
 
-.continue {
-    height: 10%;
+.third {
+    height: 120px;
+    width: 90%;
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .form1 {
+        height: 60%;
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .password {
+        font-size: 14px;
+    }
+
+    .field1 {
+        height: 80px;
+        width: 700px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+
+    }
+}
+
+.mnop {
+    height: 100px;
     width: 90%;
     display: flex;
-    align-items: center;
+    border: 0px solid blue;
     flex-direction: row;
-    justify-content: space-around;
-    border: 0px solid red;
 }
 
+.fourth {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 0px solid saddlebrown;
+
+    .email {
+        font-size: 14px;
+    }
+
+    .form1 {
+        height: 60%;
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .password {
+        font-size: 14px;
+    }
+
+    .field1 {
+        height: 35px;
+        width: 300px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+
+    }
+}
+.qrl{
+    height: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    border: 0px solid saddlebrown;
+}
 .k2 {
     height: 40px;
     width: 150px;
@@ -370,30 +379,76 @@ margin-left: 60px;
     color: white;
     font-size: medium;
     border-radius: 5px;
-    margin-bottom: 50px;
-    margin-left: 600px;
-    cursor: pointer;
+
+}
+.type{
+    height: 60px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 0px solid saddlebrown;
+    .boxes{
+       height: 50%;
+       width: 65%;
+       display: flex;
+       justify-content: space-between;
+       border: 0px solid saddlebrown;
+    }
 }
 
-.head {
-    height: 40px;
+.head1 {
+    height: 50px;
+    width: 90%;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
+   align-items: center;
     border: 0px solid red;
 }
-
+.xyz{
+    height: 100px;
+    width: 93%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    border: 0px solid saddlebrown; 
+}
 
 .order {
-    background-color: #185abc;
+    background-color:#3371B5;
     border: none;
     color: white;
-    padding: 15px 32px;
+    width: 150px;
+    height: 40px;
     text-align: center;
     text-decoration: none;
-    display: list-item;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
-    margin: 10px 7px;
     cursor: pointer;
     border-radius: 6px;
-    margin-left: 808px;
+}
+.work{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 0px solid red;
+    .n1{
+        height: 50px;
+        width: 90%;
+        display: flex;
+        font-size: medium;
+        font-weight: 400;
+        align-items: flex-end;
+        border: 0px solid red;
+    }
+    .cart1{
+        height: 150px;
+        width: 90%;
+        display: flex;
+        border: 0px solid red;
+    }
 }

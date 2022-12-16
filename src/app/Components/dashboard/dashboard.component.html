@@ -1,19 +1,21 @@
 <div class="top">
-<div class="header">
-    <app-header></app-header>
-</div>
+    <div class="header">
+        <app-header></app-header>
+    </div>
     <div class="content">
         <div class="bookname">
             <span class="sort">Books</span>
             <mat-form-field class="field" appearance="outline">
                 <mat-label style="color: black; font-size: 12px;">sort by relevance</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let food of sortrelevance" [value]="food.value">{{food.viewValue}}</mat-option>
+                <mat-select class="matselect">
+                    <mat-option (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
+                    <mat-option (click)=" hightolow()" value="two">Price:High to Low</mat-option>
+                    <mat-option (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
         <div class="listbooks">
-            <app-getbook [childmessage]="booklist" (messageevent)="recivemessage($event)"></app-getbook>
+            <app-getbook [childmessage]="booklist" (refreshEvent)="recivemessage($event)"></app-getbook>
         </div>
     </div>
 </div>
