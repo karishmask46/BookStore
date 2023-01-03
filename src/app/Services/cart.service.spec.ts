@@ -9,7 +9,7 @@ describe('CartService', () => {
   let service: CartService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({declarations:[CartService],imports:[HttpClientModule]});
+    TestBed.configureTestingModule({imports:[HttpClientModule]});
     service = TestBed.inject(CartService);
   });
 

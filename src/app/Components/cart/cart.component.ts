@@ -107,7 +107,7 @@ export class CartComponent implements OnInit {
     console.log(Book)
     this.user.removeItem(Book).subscribe((res: any) => {
       console.log(res)
-      this.messageevent.emit(res)
+      location.reload();
     })
   }
   increasebook(Book: any) {

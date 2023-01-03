@@ -19,8 +19,8 @@ export class CartService {
         'x-access-token': this.token
       })
     }
-    // console.log(this.token);
-    return this.httpservice.addcart('https://bookstore.incubation.bridgelabz.com/bookstore_user/add_cart_item/' + data.bookid,data, true, header)
+    console.log(this.token);
+    return this.httpservice.postservice('https://bookstore.incubation.bridgelabz.com/bookstore_user/add_cart_item/' + data.bookid,{}, true, header)
   }
   cartitemQuantity() {
     let header = {

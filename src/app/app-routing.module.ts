@@ -1,6 +1,7 @@
 import { compileClassMetadata } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './Components/authentication.guard';
 import { CartComponent } from './Components/cart/cart.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -9,7 +10,6 @@ import { OpenBookComponent } from './Components/open-book/open-book.component';
 import { OrderComponent } from './Components/order/order.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
-import { AuthenticationGuard } from './Services/authentication.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

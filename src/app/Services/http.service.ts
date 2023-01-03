@@ -23,7 +23,7 @@ export class HttpService {
   }
   addcart(url:any,data:any,token:boolean=true,options:any){
     console.log(url);
-    console.log(data); 
+    console.log(options); 
     return this.http.post(url,data,token && options) 
   }
   

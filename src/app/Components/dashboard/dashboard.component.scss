@@ -7,15 +7,15 @@
     justify-content: center;
 }
 .content{
-    padding-top: 640px;
-    height: 1011px;
-    width:1200px;
+    // padding-top: 640px;
+    height: auto;
+    width:1260px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     // margin-left: 50px;
-    padding-left: 50px;
+    // padding-left: 50px;
     border: 0px solid black;
 }
 .top{
@@ -23,14 +23,14 @@
     width: auto;
 }
 .bookname{
-    height: 10%;
-    width: 80%;
+    // height: 15%;
+    width: 77%;
     display: flex;
     border: 0px solid red;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 50px;
+    // margin-right: 50px;
     // margin-bottom: 1321px;
 }
 .sort{
@@ -40,14 +40,18 @@
 .field{
     border: 0px;
     font-size: 9px;
-    height: 35px;
+    height: 50px;
     width: 200px;
     border: 0px solid gainsboro;
     border-radius: 5px;
+    margin-top: 20px;
 }
+
 .listbooks{  
     display: flex;
     flex-flow: row wrap;
-    margin-top: 10px;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: center;
     border: 0px solid gainsboro;
 }

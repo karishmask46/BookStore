@@ -7,7 +7,7 @@ describe('WishlistService', () => {
   let service: WishlistService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({declarations:[WishlistService],imports:[WishlistComponent,HttpClientModule]});
+    TestBed.configureTestingModule({imports:[HttpClientModule]});
     service = TestBed.inject(WishlistService);
   });
 

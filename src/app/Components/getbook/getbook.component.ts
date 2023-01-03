@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/Services/data.service';
 
@@ -9,6 +10,7 @@ import { DataService } from 'src/app/Services/data.service';
 })
 export class GetbookComponent implements OnInit {
   @Input() childmessage:any;
+
   page:number=1;
   Search='';
   id:any;
@@ -22,13 +24,9 @@ export class GetbookComponent implements OnInit {
       // this.totalLength=res.result.length; 
     })
   }
-  toBookDetails(id: any) {
-    this.id = id;
-    this.router.navigate(['/home/openbook'], { state: { value: id } })
-  }
   onclick(book:any){
     this.dataservice.SendBookDetails(book)
     this.router.navigateByUrl('/home/Openbook')
   }
-
+  
 } 

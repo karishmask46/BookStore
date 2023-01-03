@@ -37,7 +37,7 @@
                 <span class="numder">{{cart.quantityToBuy}} {{cart.count}}</span>
                 <button class="add" (click)=" increasebook(cart)" (click)="increment()" >+</button>
                 <div class="btn">
-                    <button mat-button  (click)="deleteItem(cart._id) ">
+                    <button mat-button  (click)="deleteItem(cart._id)" (messageevent)="deleteItem($event)">
                         Remove
                     </button>
                 </div>

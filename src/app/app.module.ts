@@ -24,6 +24,11 @@ import { OrderComponent } from './Components/order/order.component';
 import { HomeComponent } from './Components/home/home.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FooterComponent } from './Components/footer/footer.component';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FilterPipe } from './filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -38,6 +43,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     WishlistComponent,
     OrderComponent,
     HomeComponent,
+    FooterComponent,
+    FilterPipe,
+    
 
   ],
   imports: [
@@ -54,7 +62,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MatSelectModule,
     MatRadioModule,
     MatPaginatorModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatBadgeModule,
+    MatSnackBarModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

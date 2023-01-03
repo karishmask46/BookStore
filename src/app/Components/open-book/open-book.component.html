@@ -1,5 +1,5 @@
 <div>
-    <app-header></app-header>
+    <app-header [cartitemslist]="badgeCounter"></app-header>
 </div>
 <div class="maincont">
     <div (click)="dasboard()" class="main">
@@ -19,15 +19,17 @@
             </div>
         </div>
         <div class="buttonimg">
-            <div  (click)="isShow()" *ngIf="!show">
-            <button class="bag" mat-raised-button  (click)="cartadd()">ADD TO BAG</button></div>  
-        <div class="quantity" *ngIf="show">
-            <button class="subtract" (click)=" decrement()">-</button>
-            <span class="numder">{{count}}</span>
-            <button class="add" (click)="increment()">+</button>
+            <div (click)="isShow()" *ngIf="!show">
+                <button class="bag" mat-raised-button (click)="cartadd()" (click)="openSnackbar('Book added successfully in cart','Dismiss')" >ADD TO BAG</button>
+            </div>
+            <div class="quantity" *ngIf="show">
+                <button class="subtract" (click)=" decrement()">-</button>
+                <span class="numder">{{badgeCounter}}</span>
+                <button class="add" (click)="increment()">+</button>
+            </div>
+            <button class="wish" mat-raised-button (click)="wishlist()" (click)="openSnackbar('Book added successfully in Wishlist','Dismiss')"><mat-icon style="color:white ;"
+                    class="fav">favorite</mat-icon>WISHLIST</button>
         </div>
-        <button class="wish" mat-raised-button (click)="wishlist()"><mat-icon  style="color:white ;" class="fav">favorite</mat-icon>WISHLIST</button>
-    </div>
     </div>
     <div class="rightpart">
         <div class="midpart">
@@ -87,10 +89,10 @@
                     </div>
                 </div>
                 <textarea matInput class="searchInput" type="text" placeholder="write a review"
-                        style="width: 570px;height: 70px;" name="comment" #box></textarea>
-                        <div fxLayoutAlign="end center">
-                            <button class="btn">Submit</button>
-                        </div>
+                    style="width: 570px;height: 70px;" name="comment" #box></textarea>
+                <div fxLayoutAlign="end center">
+                    <button class="btn">Submit</button>
+                </div>
             </div>
         </div>
     </div>

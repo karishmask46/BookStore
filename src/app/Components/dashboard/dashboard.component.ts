@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BookserviceService } from 'src/app/Services/bookservice.service';
 
 
@@ -10,6 +10,8 @@ import { BookserviceService } from 'src/app/Services/bookservice.service';
 export class DashboardComponent implements OnInit {
   booklist = []
   Search='';
+  // searchtext:string='';
+ 
   constructor(private getbookdata: BookserviceService) { }
   ngOnInit(): void {
     this.bookdate();
@@ -21,9 +23,6 @@ export class DashboardComponent implements OnInit {
       console.log(this.booklist);
     })
   }
-  recivemessage(event: any) {
-    this.bookdate();
-  }
   lowtohigh() {
     this.booklist = this.booklist.sort((low: any, high: any) => low.discountPrice - high.discountPrice);
   }
@@ -33,5 +32,10 @@ export class DashboardComponent implements OnInit {
   newestarrivals() {
     this.booklist.reverse();
   }
+  // onsearchtextentered(searchvalue:string){
+  //   this.searchtext=searchvalue;
+  //   console.log(this.searchtext);
+   
+  // }
   
 }
