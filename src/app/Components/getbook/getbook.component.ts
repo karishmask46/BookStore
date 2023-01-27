@@ -27,6 +27,7 @@ export class GetbookComponent implements OnInit {
   onclick(book:any){
     this.dataservice.SendBookDetails(book)
     this.router.navigateByUrl('/home/Openbook')
+    
   }
   
 } 

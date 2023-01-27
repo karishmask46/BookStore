@@ -75,7 +75,7 @@ export class OpenBookComponent implements OnInit {
     }
   }
   openSnackbar(message: any, action: any) {
-    this.snackbar.open(message, action)
+    this.snackbar.open(message, action,{duration:2000})
   }
 
   resetCount() {

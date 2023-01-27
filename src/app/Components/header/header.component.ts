@@ -32,4 +32,8 @@ export class HeaderComponent implements OnInit {
   searchBook(event:any){
     this.data.SendBookDetails(event.target.value)
   }
+  logout(){
+   localStorage.removeItem('token')
+   this.router.navigateByUrl('/login')
+  }
 }

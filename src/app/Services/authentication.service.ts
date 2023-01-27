@@ -8,5 +8,6 @@ export class AuthenticationService {
   constructor() { }
   gettoken(){
     return !!localStorage.getItem('token');
+
   }
 }

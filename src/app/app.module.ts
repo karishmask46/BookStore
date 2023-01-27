@@ -29,6 +29,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FilterPipe } from './filter.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     NgxPaginationModule,
     MatBadgeModule,
     MatSnackBarModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

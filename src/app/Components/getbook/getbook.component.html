@@ -1,6 +1,6 @@
 <div class="container">
     <div class="main"
-        *ngFor="let books of childmessage | filter: Search| paginate: {itemsPerPage: 12, currentPage:page,totalItems:totalLength}">
+        *ngFor="let books of childmessage | filter: Search| paginate: {itemsPerPage: 8, currentPage:page,totalItems:totalLength}">
         <div class="imagepart">
             <div class="img" (click)="onclick(books)">
                 <img class="bookimg" src="../../../assets/Image 11.png" alt="">

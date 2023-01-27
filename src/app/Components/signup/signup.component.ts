@@ -9,7 +9,6 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class SignupComponent implements OnInit {
   registerForm !: FormGroup;
-  submitted = false;
   constructor( private formBuilder:FormBuilder,private user : UserService) { }
 
   ngOnInit(): void {
@@ -21,7 +20,6 @@ export class SignupComponent implements OnInit {
     })
   }
   onSubmit() {
-    this.submitted = true;
     if (this.registerForm.valid) {
       console.log('valid data', this.registerForm.value);
       console.log('do api call');
@@ -31,22 +29,15 @@ export class SignupComponent implements OnInit {
         password: this.registerForm.value.Password,
         phone:this.registerForm.value.phone,
         service:'advance'
-
       }
       this.user.register(data).subscribe((result:any)=>
       {
-        console.log(result);
-        
+        console.log(result);    
       })
-
     }
     else {
       console.log('invalid data', this.registerForm.value);
       console.log('no api call');
-
     }
-
-
-
   }
 }
