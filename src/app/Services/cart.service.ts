@@ -20,7 +20,7 @@ export class CartService {
       })
     }
     console.log(this.token);
-    return this.httpservice.postservice('https://bookstore.incubation.bridgelabz.com/bookstore_user/add_cart_item/' + data.bookid,{}, true, header)
+    return this.httpservice.postservice('https://bookstore.incubation.bridgelabz.com/bookstore_user/add_cart_item/' + data.bookid, {}, true, header)
   }
   cartitemQuantity() {
     let header = {
@@ -29,29 +29,28 @@ export class CartService {
         'x-access-token': this.token
       })
     }
-    return this.httpservice.getbook('https://bookstore.incubation.bridgelabz.com/bookstore_user/get_cart_items',true,header)
+    return this.httpservice.getbook('https://bookstore.incubation.bridgelabz.com/bookstore_user/get_cart_items', true, header)
   }
-  customerdetails(data:any){
+  customerdetails(data: any) {
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'x-access-token': this.token
       })
     }
-    return this.httpservice.putbook('https://bookstore.incubation.bridgelabz.com/bookstore_user/edit_user',data,true,header)
-   }
-  
-   removeItem(data:any){
+    return this.httpservice.putbook('https://bookstore.incubation.bridgelabz.com/bookstore_user/edit_user', data, true, header)
+  }
+
+  removeItem(data: any) {
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'x-access-token': this.token
       })
     }
-    return this.httpservice.deleteService('https://bookstore.incubation.bridgelabz.com/bookstore_user/remove_cart_item/'+data,true,header)
-   }
-   order(data:any)
-  {
+    return this.httpservice.deleteService('https://bookstore.incubation.bridgelabz.com/bookstore_user/remove_cart_item/' + data, true, header)
+  }
+  order(data: any) {
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -60,14 +59,14 @@ export class CartService {
     }
     return this.httpservice.postservice("https://bookstore.incubation.bridgelabz.com/bookstore_user/add/order", data, true, header)
   }
-  quantity(bookid:any,data:any){
+  quantity(bookid: any, data: any) {
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'x-access-token': this.token
       })
+    }
+    return this.httpservice.putbook("https://bookstore.incubation.bridgelabz.com/bookstore_user/cart_item_quantity/" + bookid, data, true, header)
   }
-  return this.httpservice.putbook("https://bookstore.incubation.bridgelabz.com/bookstore_user/cart_item_quantity/"+bookid,data,true,header)
 }
-} 
 

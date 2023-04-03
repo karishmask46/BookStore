@@ -49,9 +49,7 @@ export class OpenBookComponent implements OnInit {
     console.log(this.Book._id);
     this.cartservice.addtoCart(data).subscribe((result: any) => {
       console.log(result);
-     
-      
-    })
+          })
   }
   wishlist(){
     let data={

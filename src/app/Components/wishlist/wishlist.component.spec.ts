@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { WishlistComponent } from './wishlist.component';
 
-describe('WishlistComponent', () => {
+fdescribe('WishlistComponent', () => {
   let component: WishlistComponent;
   let fixture: ComponentFixture<WishlistComponent>;
 
